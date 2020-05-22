@@ -27,7 +27,7 @@ async function send (method, path, data) {
 
   const jsonResponse = await response.json()
   if (jsonResponse.error === '需進行防機器人驗證，若無出現請重新整理') {
-    throw new RejectError('需進行防機器人驗證，請至網頁執行')
+    throw new RejectError(`${(new Date()).toISOString()}: 需進行防機器人驗證，請至網頁執行`)
   }
 
   return jsonResponse
