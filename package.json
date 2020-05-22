@@ -1,0 +1,32 @@
+{
+  "name": "your-kirito-node",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "node --experimental-modules --es-module-specifier-resolution=node ./src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoftwareSing/your-kirito-node.git"
+  },
+  "author": "SoftwareSing",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/SoftwareSing/your-kirito-node/issues"
+  },
+  "homepage": "https://github.com/SoftwareSing/your-kirito-node#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
