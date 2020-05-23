@@ -1,3 +1,5 @@
+import { getFetch } from '../env/fetch'
+import { getToken } from '../env/token'
 import { CaptchaError } from '../utils/error/CaptchaError'
 import { wait } from '../utils/wait'
 import { randomNumber } from '../utils/randomNumber'
@@ -37,7 +39,8 @@ async function send (method, path, data) {
   const url = `https://mykirito.com/${path}`
   const body = typeof data === 'object' ? JSON.stringify(data) : undefined
 
-  const response = await customFetch(url, {
+  const envFetch = getFetch()
+  const response = await envFetch(url, {
     headers: {
       token: getToken(),
       origin: 'https://mykirito.com',
@@ -55,17 +58,4 @@ async function send (method, path, data) {
   }
 
   return jsonResponse
-}
-
-let token
-function getToken () {
-  return token
-}
-export function setToken (input) {
-  token = input
-}
-
-let customFetch
-export function setFetch (fetchFunc) {
-  customFetch = fetchFunc
 }

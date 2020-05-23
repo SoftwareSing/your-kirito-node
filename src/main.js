@@ -1,5 +1,6 @@
+import { setFetch } from './env/fetch'
+import { setToken } from './env/token'
 import { autoDoaction } from './autoDoaction'
-import { setToken, setFetch } from './systemCall/systemCall'
 
 export function setEnv ({ customFetch }) {
   setFetch(customFetch)
