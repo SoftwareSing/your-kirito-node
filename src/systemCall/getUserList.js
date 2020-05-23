@@ -5,5 +5,5 @@ export async function getUserList ({ lv = 999, page = 1 }) {
   const url = generateUrlQueryParam('api/user-list', { lv, page })
   const result = await get(url)
 
-  return result
+  return result.userList
 }
