@@ -1,5 +1,7 @@
 # your-kirito-node
 
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
 ## 使用前的注意事項
 
 在你開始使用之前，應先觀賞以下影片，以確保您了解如何使用  
