@@ -45,7 +45,7 @@ npm run build_script
 
 ### start by web console
 
-編譯後將輸出到 `_____output_____.js` ，將檔案內容複製到 `tampermonkey` 中
+編譯後將輸出到 `_____output_____.js` ，將檔案內容複製到 `tampermonkey` 中  
 接著在網站 `console` 透過呼叫 `yourKiritoScriptGOGO(token)` 啟用
 
 ```js
