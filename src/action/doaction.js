@@ -1,5 +1,5 @@
-import { sendDoaction } from '../web-request/sendDoaction'
+import { postDoaction } from '../web-request/postDoaction'
 
 export function doaction (action = 'girl2') {
-  return sendDoaction(action)
+  return postDoaction(action)
 }
