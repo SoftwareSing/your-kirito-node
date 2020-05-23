@@ -1,4 +1,3 @@
-import fetch from 'node-fetch'
 import { RejectError } from '../utils/error/RejectError'
 
 export function get (path, data) {
@@ -13,7 +12,7 @@ async function send (method, path, data) {
   const url = `https://mykirito.com/${path}`
   const body = typeof data === 'object' ? JSON.stringify(data) : undefined
 
-  const response = await fetch(url, {
+  const response = await customFetch(url, {
     headers: {
       token: getToken(),
       origin: 'https://mykirito.com',
@@ -39,4 +38,9 @@ function getToken () {
 }
 export function setToken (input) {
   token = input
+}
+
+let customFetch
+export function setFetch (fetchFunc) {
+  customFetch = fetchFunc
 }
