@@ -10,6 +10,7 @@
 
 import { main, setEnv } from './main'
 import { setToken } from './systemCall/systemCall'
+import { getProfile } from './systemCall/getProfile'
 import { getUserList } from './systemCall/getUserList'
 import { postDoaction } from './systemCall/postDoaction'
 
@@ -22,6 +23,7 @@ window.yourKiritoScriptGOGO = function (token) {
 function generateEntireCommandList () {
   window.__yourSystemCall = {
     setToken,
+    getProfile,
     getUserList,
     postDoaction,
     inspectEntireCommandList
