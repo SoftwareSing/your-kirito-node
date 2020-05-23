@@ -1,6 +1,7 @@
 import fetch from 'node-fetch'
 
 import { token } from '../config'
-import { main } from './main'
+import { main, setEnv } from './main'
 
-main({ token, customFetch: fetch })
+setEnv({ customFetch: fetch })
+main({ token })

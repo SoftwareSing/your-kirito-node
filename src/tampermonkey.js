@@ -8,11 +8,26 @@
 // @grant        none
 // ==/UserScript==
 
-import { main } from './main'
+import { main, setEnv } from './main'
+import { setToken } from './systemCall/systemCall'
+import { getUserList } from './systemCall/getUserList'
+import { postDoaction } from './systemCall/postDoaction'
+
+setEnv({ customFetch: window.fetch })
 
 window.yourKiritoScriptGOGO = function (token) {
-  main({
-    token,
-    customFetch: window.fetch
-  })
+  main({ token })
 }
+
+function generateEntireCommandList () {
+  window.__yourSystemCall = {
+    setToken,
+    getUserList,
+    postDoaction,
+    inspectEntireCommandList
+  }
+}
+function inspectEntireCommandList () {
+  console.log(window.__yourSystemCall)
+}
+generateEntireCommandList()
