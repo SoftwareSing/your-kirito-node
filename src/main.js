@@ -1,5 +1,5 @@
 import { autoDoaction } from './autoDoaction'
-import { setToken, setFetch } from './web-request/systemCall'
+import { setToken, setFetch } from './systemCall/systemCall'
 
 export function main ({ token, customFetch }) {
   setToken(token)

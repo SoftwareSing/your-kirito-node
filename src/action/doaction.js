@@ -1,4 +1,4 @@
-import { postDoaction } from '../web-request/postDoaction'
+import { postDoaction } from '../systemCall/postDoaction'
 
 export function doaction (action = 'girl2') {
   return postDoaction(action)
