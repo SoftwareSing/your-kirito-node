@@ -1,14 +1,14 @@
 import { CaptchaError } from '../utils/error/CaptchaError'
 
 export function get (path, data) {
-  return send('GET', path, data)
+  return systemCall('GET', path, data)
 }
 
 export function post (path, data) {
-  return send('POST', path, data)
+  return systemCall('POST', path, data)
 }
 
-async function send (method, path, data) {
+async function systemCall (method, path, data) {
   const url = `https://mykirito.com/${path}`
   const body = typeof data === 'object' ? JSON.stringify(data) : undefined
 
