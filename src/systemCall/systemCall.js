@@ -1,4 +1,6 @@
 import { CaptchaError } from '../utils/error/CaptchaError'
+import { wait } from '../utils/wait'
+import { randomNumber } from '../utils/randomNumber'
 
 export function get (path, data) {
   return systemCall('GET', path, data)
@@ -8,7 +10,30 @@ export function post (path, data) {
   return systemCall('POST', path, data)
 }
 
+let lastCallTime = 0
+let lock = false
 async function systemCall (method, path, data) {
+  // eslint-disable-next-line no-unmodified-loop-condition
+  while (lock) {
+    await wait(500)
+  }
+  lock = true
+
+  const passTime = Date.now() - lastCallTime
+  if (passTime < 1000) {
+    const baseNeedWait = 1000 - passTime
+    await wait(randomNumber(baseNeedWait + 500, baseNeedWait))
+  }
+
+  const result = await send(method, path, data)
+
+  lastCallTime = Date.now()
+  lock = false
+
+  return result
+}
+
+async function send (method, path, data) {
   const url = `https://mykirito.com/${path}`
   const body = typeof data === 'object' ? JSON.stringify(data) : undefined
 
