@@ -33,6 +33,10 @@ async function send (method, path, data) {
   return jsonResponse
 }
 
+let token
 function getToken () {
-  return process.env.token
+  return token
+}
+export function setToken (input) {
+  token = input
 }

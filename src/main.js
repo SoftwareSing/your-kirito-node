@@ -1,11 +1,9 @@
 import { autoDoaction } from './autoDoaction'
-import { token } from '../config'
+import { setToken } from './web-request/http'
 
-function main () {
-  process.env.token = token
+export function main (token) {
+  setToken(token)
   console.log('auto C8763 start')
 
   autoDoaction()
 }
-
-main()
