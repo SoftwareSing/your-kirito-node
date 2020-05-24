@@ -9,7 +9,7 @@
 // ==/UserScript==
 
 import { main, setEnv } from './main'
-import { setToken } from './systemCall/systemCall'
+import { setToken } from './env/token'
 import { getProfile } from './systemCall/getProfile'
 import { getUserList } from './systemCall/getUserList'
 import { postDoaction } from './systemCall/postDoaction'
