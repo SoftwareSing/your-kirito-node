@@ -2,17 +2,22 @@
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-本專案透過使用 `神聖術` ([システム・コール](https://youtu.be/fN65vtFBYQ0)) 來操作你的桐人  
+本專案透過使用 `神聖術` ([システム・コール](https://youtu.be/fN65vtFBYQ0)) 來操作[你的桐人](https://mykirito.com/)  
 目前已完成桐人最重要的招牌絕招 ── `汁妹` ，確保你的桐人可以有後宮環繞  
 其他神聖術陸續嘗試中
 
 ---
 
-目前支援透過 [Node.js](https://nodejs.org/) 或 [Tampermonkey](https://www.tampermonkey.net/) 二種使用方式  
-您可以依照需求選擇用 CLI 或是 瀏覽器外掛 來操作
-
-**NOTE** : 本專案透過 [AGPL-3.0-or-later](/LICENSE) 授權開源  
+本專案透過 [AGPL-3.0-or-later](/LICENSE) 授權開源  
 歡迎自由複製修改，但修改後再發布需注意 `AGPL` 相關開源規範 ([開放源碼授權概觀](https://medium.com/getamis/%E9%96%8B%E6%94%BE%E6%BA%90%E7%A2%BC%E6%8E%88%E6%AC%8A%E6%A6%82%E8%A7%80-%E4%B8%8B-eeda7ce13f1e))
+
+**NOTE** : 本專案不保證永久支援，亦不負責使用後造成的任何後果 (如被 ban)  
+~~尤其是我玩的有點膩了~~
+
+---
+
+目前支援透過 [Node.js](https://nodejs.org/) 或 [Tampermonkey](https://www.tampermonkey.net/) 二種使用方式  
+您可以依照需求選擇用 CLI 或是 瀏覽器腳本 來操作
 
 ## 使用前的注意事項
 
