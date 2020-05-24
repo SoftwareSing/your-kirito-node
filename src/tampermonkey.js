@@ -12,6 +12,7 @@ import { main, setEnv } from './main'
 import { setToken } from './env/token'
 import { getProfile } from './systemCall/getProfile'
 import { getUserList } from './systemCall/getUserList'
+import { postChallenge } from './systemCall/postChallenge'
 import { postDoaction } from './systemCall/postDoaction'
 
 setEnv({ customFetch: window.fetch })
@@ -25,6 +26,7 @@ function generateEntireCommandList () {
     setToken,
     getProfile,
     getUserList,
+    postChallenge,
     postDoaction,
     inspectEntireCommandList
   }
