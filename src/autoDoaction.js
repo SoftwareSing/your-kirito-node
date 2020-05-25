@@ -1,9 +1,9 @@
-import { doaction } from './action/doaction'
 import { randomNumber } from './utils/randomNumber'
+import { Doaction } from './action/doaction'
 
 export function autoDoaction () {
   setTimeout(async function () {
-    const isSuccess = await doaction()
+    const isSuccess = await Doaction.sit()
     if (isSuccess) {
       autoDoaction()
     }
