@@ -18,13 +18,6 @@
 目前支援透過 [Node.js](https://nodejs.org/) 或 [Tampermonkey](https://www.tampermonkey.net/) 二種使用方式  
 您可以依照需求選擇用 CLI 或是 瀏覽器腳本 來操作
 
-## 使用前的注意事項
-
-在你開始使用之前，應先觀賞以下影片，以確保您了解如何使用  
-<https://youtu.be/pFgUluV_00s>
-
-在您了解可愛即是正義後，即可開始使用
-
 ## install
 
 ```shell
